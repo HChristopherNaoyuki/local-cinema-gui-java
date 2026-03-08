@@ -16,7 +16,6 @@ ticket sales, calculate VAT, generate reports, and maintain sales records.
 - [Business Logic](#business-logic)
 - [Testing](#testing)
 - [Project Structure](#project-structure)
-- [Contact](#contact)
 
 ## Overview
 
