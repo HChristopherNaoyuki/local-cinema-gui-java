@@ -1,8 +1,9 @@
 # Local Cinema GUI Java Application
 
-A Java-based desktop application for processing movie ticket sales at a local cinema. 
-This application provides a user-friendly graphical interface for cinema staff to manage 
-ticket sales, calculate VAT, generate reports, and maintain sales records.
+A Java-based desktop application for processing movie ticket sales at a local
+cinema. This application provides a user-friendly graphical interface for
+cinema staff to manage ticket sales, calculate VAT, generate reports, and
+maintain sales records.
 
 ## Table of Contents
 
@@ -19,415 +20,188 @@ ticket sales, calculate VAT, generate reports, and maintain sales records.
 
 ## Overview
 
-The Local Cinema GUI Java Application is designed to streamline the ticket sales process for cinema staff. 
-It provides an intuitive interface for selecting movies, entering ticket quantities and prices, calculating 
-totals with VAT, and generating formatted sales reports. All transactions are automatically saved to a text 
-file for record-keeping purposes.
+The Local Cinema GUI Java Application is designed to streamline the ticket
+sales process for cinema staff. It provides an intuitive interface for
+selecting movies, entering ticket quantities and prices, calculating totals
+with VAT, and generating formatted sales reports. All transactions are
+automatically saved to a text file for record-keeping purposes.
 
-This project demonstrates:
-- Java Swing GUI development
-- Object-oriented programming principles
-- Interface-based design
-- Data validation techniques
-- File I/O operations
-- Unit testing with JUnit 4
-- MVC architectural pattern
+This project demonstrates Java Swing GUI development, object-oriented
+programming principles, interface-based design, data validation techniques,
+file I/O operations, unit testing with JUnit 4, and the MVC architectural
+pattern.
 
 ## Features
 
-### Core Functionality
-- **Movie Selection**: Dropdown menu with three movie options (Napoleon, Oppenheimer, Damsel)
-- **Ticket Entry**: Input fields for ticket quantity and price per ticket
-- **Automated Calculations**: Automatic calculation of subtotal, 14% VAT, and total amount
-- **Report Generation**: Formatted sales reports displayed in a read-only text area
-- **File Persistence**: Automatic saving of all reports to `report.txt`
+The application includes a dropdown menu with three movie options: Napoleon,
+Oppenheimer, and Damsel. Users can input fields for ticket quantity and price
+per ticket. The system automatically calculates subtotal, a 14 per cent VAT,
+and the total amount. Formatted sales reports appear in a read-only text area,
+and all reports save automatically to a file named report.txt.
 
-### User Interface
-- **Menu System**: Complete menu bar with File and Tools menus
-- **Keyboard Shortcuts**: Mnemonic shortcuts for all menu items
-- **Form Clearing**: One-click reset of all input fields
-- **Error Dialogs**: User-friendly error messages for invalid inputs
-- **Success Confirmation**: Dialog confirmation after successful processing
-
-### Data Validation
-- Movie name cannot be empty
-- Number of tickets must be a positive integer (> 0)
-- Ticket price must be a positive number (> 0)
-- Comprehensive error handling for non-numeric inputs
-
-### Testing
-- 33 unit tests covering all business logic
-- Comprehensive validation test cases
-- Edge case testing for boundary conditions
-- Object independence verification
+The user interface includes a complete menu bar with File and Tools menus,
+keyboard mnemonics for all menu items, a one-click form reset button, error
+dialogs for invalid inputs, and a confirmation dialog after successful
+processing. Data validation ensures the movie name is not empty, the number
+of tickets is a positive integer greater than zero, and the ticket price is a
+positive number greater than zero. The project includes 33 unit tests covering
+all business logic, validation test cases, edge conditions, and object
+independence verification.
 
 ## Technology Stack
 
-| Component | Technology |
-|-----------|------------|
-| Programming Language | Java 8 |
-| GUI Framework | Swing (javax.swing) |
-| Event Handling | AWT (java.awt) |
-| File Operations | Java I/O (java.io) |
-| Unit Testing | JUnit 4 |
-| Build Tool | Manual compilation / Any Java IDE |
-| Version Control | Git |
+The application uses Java 8 as the programming language with the Swing
+framework for the graphical user interface. Event handling relies on the AWT
+library. File operations use the Java I/O library. Unit testing is performed
+with JUnit 4. The build process uses manual compilation or any standard Java
+IDE. Version control is managed with Git.
 
 ## Prerequisites
 
-Before installing and running this application, ensure you have the following:
-
-### Software Requirements
-- **Java Development Kit (JDK) 8 or higher** - [Download from Oracle](https://www.oracle.com/java/technologies/javase-downloads.html)
-- **Git** (optional, for cloning) - [Download from git-scm.com](https://git-scm.com/downloads)
-
-### System Requirements
-- **Operating System**: Windows 7/8/10/11, macOS 10.12+, or Linux
-- **Memory**: 256 MB RAM minimum
-- **Disk Space**: 10 MB for application files
-- **Display**: 1024 × 768 resolution or higher
-
-### Development Tools (Optional)
-- **IDE**: Eclipse, IntelliJ IDEA, or NetBeans
-- **JUnit 4**: For running tests (included in lib/)
+Before installing and running this application, you need the Java Development
+Kit version 8 or higher installed on your system. Git is optional but
+recommended for cloning the repository. The operating system can be Windows
+7 through 11, macOS 10.12 or later, or any standard Linux distribution. The
+application requires a minimum of 256 megabytes of RAM, 10 megabytes of disk
+space, and a display resolution of 1024 by 768 pixels or higher. For
+development, you may use Eclipse, IntelliJ IDEA, or NetBeans, along with the
+JUnit 4 library.
 
 ## Installation
 
-### Method 1: Clone from GitHub
+To clone the repository from GitHub, use the following command:
 
 ```bash
-# Clone the repository
 git clone https://github.com/HChristopherNaoyuki/local-cinema-gui-java.git
+```
 
-# Navigate to project directory
+After cloning, navigate into the project directory and create the necessary
+folders if they do not already exist:
+
+```bash
 cd local-cinema-gui-java
-
-# Create necessary directories (if not present)
 mkdir -p Solution/test
 mkdir lib
 ```
 
-### Method 2: Download ZIP
-
-1. Visit the repository: [https://github.com/HChristopherNaoyuki/local-cinema-gui-java](https://github.com/HChristopherNaoyuki/local-cinema-gui-java)
-2. Click the "Code" button
-3. Select "Download ZIP"
-4. Extract the ZIP file to your desired location
-
-### Setting Up Dependencies
-
-Download JUnit 4 and Hamcrest libraries and place them in the `lib` directory:
+You must download JUnit 4 and Hamcrest libraries and place them in the lib
+directory. Use the following commands on macOS or Linux, or download the files
+manually from the official Maven repository:
 
 ```bash
-# Navigate to lib directory
 cd lib
-
-# Download JUnit 4
 wget https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar
-
-# Download Hamcrest Core
-wget https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+wget https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-
+core-1.3.jar
 ```
 
-Or manually download from:
-- [JUnit 4.13.2](https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar)
-- [Hamcrest Core 1.3](https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar)
+To compile the application on Windows, run:
 
-### Compiling the Application
-
-**On Windows:**
 ```bash
-# Compile all Java files
 javac -cp ".;lib/junit-4.13.2.jar" Solution/*.java Solution/test/*.java
 ```
 
-**On macOS/Linux:**
+On macOS or Linux, run:
+
 ```bash
-# Compile all Java files
 javac -cp .:lib/junit-4.13.2.jar Solution/*.java Solution/test/*.java
 ```
 
 ## Usage Guide
 
-### Running the Application
-
-**From the command line:**
-
-Navigate to the project root directory and run:
+To run the application from the command line on Windows, execute:
 
 ```bash
-# On Windows
-java -cp . Solution.Solution
-
-# On macOS/Linux
 java -cp . Solution.Solution
 ```
 
-**From an IDE:**
-1. Open the project in your preferred IDE
-2. Locate the `Solution.java` file in the `Solution` package
-3. Right-click and select "Run File" or "Run Solution.main()"
+On macOS or Linux, execute:
 
-### Using the Application
+```bash
+java -cp . Solution.Solution
+```
 
-#### Step 1: Select a Movie
-- Click the dropdown menu labeled "Select Movie:"
-- Choose from: Napoleon, Oppenheimer, or Damsel
+You may also open the project in your preferred IDE, locate the Solution.java
+file in the Solution package, and run the main method directly.
 
-#### Step 2: Enter Ticket Details
-- **Number of Tickets**: Enter a positive whole number (e.g., 3, 5, 10)
-- **Ticket Price (R)**: Enter a positive number (e.g., 120.00, 150.50)
-
-#### Step 3: Process the Sale
-- Click `Tools → Process` in the menu bar, OR
-- Press `Alt + T` followed by `P`
-
-#### Step 4: Review the Report
-- The formatted report appears in the text area below
-- A confirmation dialog confirms successful processing
-
-#### Step 5: Clear the Form (Optional)
-- Click `Tools → Clear` in the menu bar, OR
-- Press `Alt + T` followed by `C`
-
-#### Step 6: Exit the Application
-- Click `File → Exit` in the menu bar, OR
-- Press `Alt + F` followed by `X`, OR
-- Click the standard window close button
+To use the application, first click the dropdown menu labeled Select Movie and
+choose Napoleon, Oppenheimer, or Damsel. Then enter a positive whole number
+for the number of tickets and a positive number for the ticket price in South
+African Rand. Click Tools then Process in the menu bar, or press Alt followed
+by T and then P. The formatted report will appear in the text area, and a
+confirmation dialog will confirm success. To clear the form, click Tools then
+Clear or press Alt followed by T and then C. To exit the application, click
+File then Exit, press Alt followed by F and then X, or click the standard
+window close button.
 
 ## Application Walkthrough
 
-### Main Window Layout
-
-```
-┌─────────────────────────────────────────────────────┐
-│  File  Tools                                        │
-├─────────────────────────────────────────────────────┤
-│ ┌─────────────────────────────────────────────────┐ │
-│ │              Ticket Details                     │ │
-│ │  Select Movie: [Napoleon       ▼]               │ │
-│ │  Number of Tickets: [          ]                │ │
-│ │  Ticket Price (R): [           ]                │ │
-│ └─────────────────────────────────────────────────┘ │
-│ ┌─────────────────────────────────────────────────┐ │
-│ │                 Sales Report                    │ │
-│ │  ============================================== │ │
-│ │         MOVIE TICKET SALES REPORT               │ │
-│ │  ============================================== │ │
-│ │                                                 │ │
-│ │  Movie Selected: Oppenheimer                    │ │
-│ │  ------------------------------                 │ │
-│ │  Number of Tickets: 3                           │ │
-│ │  Ticket Price: R150.00                          │ │
-│ │  Subtotal: R450.00                              │ │
-│ │  VAT (14%): R63.00                              │ │
-│ │  ------------------------------                 │ │
-│ │  TOTAL AMOUNT: R513.00                          │ │
-│ │  ============================================== │ │
-│ │  Report Generated: Wed Jan 24 14:35:22 SAST 2024│ │
-│ │  ============================================== │ │
-│ └─────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────┘
-```
-
-### Sample Report Output
-
-When you process a ticket sale, the application generates a report like this:
-
-```
-==================================================
-           MOVIE TICKET SALES REPORT
-==================================================
-
-Movie Selected: Oppenheimer
-------------------------------
-Number of Tickets: 3
-Ticket Price: R150.00
-Subtotal: R450.00
-VAT (14%): R63.00
-------------------------------
-TOTAL AMOUNT: R513.00
-==================================================
-Report Generated: Wed Jan 24 14:35:22 SAST 2024
-==================================================
-```
-
-### Report File
-
-All processed reports are automatically appended to `report.txt` in the application's working directory:
-
-```
-==================================================
-           MOVIE TICKET SALES REPORT
-==================================================
-
-Movie Selected: Oppenheimer
-------------------------------
-Number of Tickets: 3
-Ticket Price: R150.00
-Subtotal: R450.00
-VAT (14%): R63.00
-------------------------------
-TOTAL AMOUNT: R513.00
-==================================================
-Report Generated: Wed Jan 24 14:35:22 SAST 2024
-==================================================
-==================================================
-           MOVIE TICKET SALES REPORT
-==================================================
-
-Movie Selected: Napoleon
-------------------------------
-Number of Tickets: 2
-Ticket Price: R120.00
-Subtotal: R240.00
-VAT (14%): R33.60
-------------------------------
-TOTAL AMOUNT: R273.60
-==================================================
-Report Generated: Wed Jan 24 15:10:45 SAST 2024
-==================================================
-```
+The main application window contains a menu bar with File and Tools options.
+Below the menu bar, a panel labelled Ticket Details holds the movie selection
+dropdown, the number of tickets input field, and the ticket price input field.
+A second panel labelled Sales Report contains a read-only text area where the
+formatted report appears. When you process a sale, the report displays the
+movie selected, the number of tickets, the ticket price, the subtotal, the 14
+per cent VAT amount, the total amount, and a timestamp showing when the report
+was generated. All processed reports are automatically appended to a file
+named report.txt in the application's working directory.
 
 ## Business Logic
 
-### Price Calculation
+The application calculates financial values using three key formulas. The
+subtotal equals the number of tickets multiplied by the ticket price. The VAT
+amount equals the subtotal multiplied by 0.14. The total with VAT equals the
+subtotal plus the VAT amount. For example, three tickets at one hundred fifty
+Rand each gives a subtotal of four hundred fifty Rand. The VAT amount is sixty
+three Rand, and the total amount is five hundred thirteen Rand.
 
-The application follows these calculation rules:
-
-| Calculation | Formula | Example |
-|-------------|---------|---------|
-| Subtotal | Number of Tickets × Ticket Price | 3 × R150.00 = R450.00 |
-| VAT Amount | Subtotal × 0.14 | R450.00 × 0.14 = R63.00 |
-| Total with VAT | Subtotal + VAT Amount | R450.00 + R63.00 = R513.00 |
-
-### Validation Rules
-
-| Field | Validation Rule | Invalid Examples |
-|-------|----------------|------------------|
-| Movie Name | Cannot be null or empty | null, "", "   " |
-| Number of Tickets | Must be positive integer > 0 | "0", "-5", "five", "" |
-| Ticket Price | Must be positive number > 0 | "0.00", "-50.00", "fifty", "" |
+Validation rules require the movie name to be not null or empty, the number
+of tickets to be a positive integer greater than zero, and the ticket price
+to be a positive number greater than zero. Invalid examples include an empty
+or blank movie name, a ticket quantity of zero or negative five, a text value
+like five instead of a number, and a ticket price of zero or a text value like
+fifty.
 
 ## Testing
 
-### Running Unit Tests
+To run the unit tests from the command line on Windows, execute:
 
-**From the command line:**
-
-On Windows:
 ```bash
-java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore Solution.test.MovieTicketsTest
-java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore Solution.test.MovieTicketDataTest
+java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" \
+org.junit.runner.JUnitCore Solution.test.MovieTicketsTest
+java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" \
+org.junit.runner.JUnitCore Solution.test.MovieTicketDataTest
 ```
 
-On macOS/Linux:
+On macOS or Linux, execute:
+
 ```bash
-java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore Solution.test.MovieTicketsTest
-java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore Solution.test.MovieTicketDataTest
+java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar \
+org.junit.runner.JUnitCore Solution.test.MovieTicketsTest
+java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar \
+org.junit.runner.JUnitCore Solution.test.MovieTicketDataTest
 ```
 
-**From an IDE:**
-1. Navigate to the `Solution.test` package
-2. Right-click on `MovieTicketsTest.java` or `MovieTicketDataTest.java`
-3. Select "Run As → JUnit Test"
-
-### Test Coverage
-
-| Test Class | Number of Tests | Test Categories |
-|------------|-----------------|-----------------|
-| MovieTicketsTest | 20 | Price calculation, validation rules, edge cases |
-| MovieTicketDataTest | 13 | Constructor behavior, getter/setter methods, object independence |
-| **Total** | **33** | Comprehensive coverage of all components |
+The MovieTicketsTest class contains 20 tests covering price calculations,
+validation rules, and edge cases. The MovieTicketDataTest class contains 13
+tests covering constructor behaviour, getter and setter methods, and object
+independence. The total of 33 tests provides comprehensive coverage of all
+business logic components.
 
 ## Project Structure
 
-```
-local-cinema-gui-java/
-├── Solution/
-│   ├── Solution.java                 # Main GUI application
-│   ├── IMovieTickets.java            # Business logic interface
-│   ├── MovieTickets.java             # Business logic implementation
-│   ├── MovieTicketData.java          # Data container class
-│   └── test/
-│       ├── MovieTicketsTest.java     # Unit tests for MovieTickets
-│       └── MovieTicketDataTest.java  # Unit tests for MovieTicketData
-├── lib/
-│   ├── junit-4.13.2.jar              # JUnit 4 testing framework
-│   └── hamcrest-core-1.3.jar         # Hamcrest matchers
-├── report.txt                         # Generated sales reports (created at runtime)
-├── README.md                          # This file
-└── .gitignore                         # Git ignore file
-```
+The project root directory contains a Solution folder with all source code
+files, a lib folder with JUnit and Hamcrest library JAR files, a report.txt
+file that is created at runtime, and a README.md file. Within the Solution
+folder, the Solution.java file contains the main GUI application. The
+IMovieTickets.java file defines the business logic interface. The
+MovieTickets.java file provides the implementation of ticket calculations and
+validation. The MovieTicketData.java file serves as the data container class
+for input values. A test subfolder contains MovieTicketsTest.java with 20 unit
+tests and MovieTicketDataTest.java with 13 unit tests for the data container.
 
-### Key Files Description
+---
 
-| File | Description |
-|------|-------------|
-| `Solution.java` | Main application class with GUI implementation |
-| `IMovieTickets.java` | Interface defining the contract for business logic |
-| `MovieTickets.java` | Implementation of ticket calculation and validation |
-| `MovieTicketData.java` | Data container for input values |
-| `MovieTicketsTest.java` | Unit tests for business logic (20 tests) |
-| `MovieTicketDataTest.java` | Unit tests for data container (13 tests) |
-| `report.txt` | Auto-generated file containing all sales reports |
-
-## Contributing
-
-Contributions to this project are welcome! Please follow these steps:
-
-### Contribution Workflow
-
-1. **Fork the repository**
-   ```bash
-   # Click the "Fork" button on GitHub
-   ```
-
-2. **Clone your fork**
-   ```bash
-   git clone https://github.com/your-username/local-cinema-gui-java.git
-   cd local-cinema-gui-java
-   ```
-
-3. **Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-4. **Make your changes**
-   - Follow existing code style (Allman style brackets)
-   - Add comments for complex logic
-   - Update or add unit tests as needed
-   - Ensure all tests pass
-
-5. **Commit your changes**
-   ```bash
-   git add .
-   git commit -m "Description of your changes"
-   ```
-
-6. **Push to your fork**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-7. **Create a Pull Request**
-   - Go to the original repository on GitHub
-   - Click "New Pull Request"
-   - Select your feature branch
-   - Provide a clear description of your changes
-
-### Coding Standards
-
-- Use Allman style braces (opening brace on new line)
-- Include comprehensive comments for all methods
-- Follow Java naming conventions
-- Maintain test coverage for new functionality
-- Ensure Java 8 compatibility
-
-## Acknowledgments
-
-- Based on concepts from "Java For Dummies, 6th Edition" by Barry Burd
-- Developed as part of Programming 1B (PROG6112) assessment
+End of Document
 
 ---
