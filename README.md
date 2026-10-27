@@ -202,6 +202,6 @@ tests and MovieTicketDataTest.java with 13 unit tests for the data container.
 
 ---
 
-End of Document
+END OF DOCUMENT
 
 ---
